@@ -18,7 +18,7 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function update(jarray) {
-    document.getElementById("cyclonestat").innerHTML = status[jarray[0]["cyclone"]["status"]];
+    document.getElementById("cyclonestat").innerHTML = xmlhttp.responseText;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = status[jarray[0]["chair"]["status"]];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
