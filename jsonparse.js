@@ -1,4 +1,4 @@
-var url = "http://www.noblewolf42.com/RideStatus/data.json";
+var url = "/RideStatus/data.json";
 var xmlhttp = new XMLHttpRequest();
 
 var status = new Array();
