@@ -1,6 +1,6 @@
 var url = "/RideStatus/data.json";
 var xmlhttp = new XMLHttpRequest();
-var myObj = JSON.parse({"not":"working", "count":42});
+var myObj = {"not":"working", "count":42};
 
 var status = new Array();
     status[0]="Open";
@@ -10,7 +10,7 @@ var status = new Array();
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myObj = JSON.parse(xmlhttp.responseText);
+        myObj = xmlhttp.responseText;
 		update();
 		}
 }
