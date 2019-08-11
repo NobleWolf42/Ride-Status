@@ -2,15 +2,17 @@ var url = "/RideStatus/data.json";
 var xmlhttp = new XMLHttpRequest();
 
 var status = new Array();
-    status[0]="Open";
-    status[1]="Closed";
-    status[2]="Temporaly Closed for Weather";
-    status[3]="Temporaly Closed for Maintence";
+
+status[0]="Open";
+status[1]="Closed";
+status[2]="Temporaly Closed for Weather";
+status[3]="Temporaly Closed for Maintence";
+
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+myOBJ = JSON.parse(xmlhttp.responseText);
 
 function update() {
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
-    myOBJ = JSON.parse(xmlhttp.responseText);
     document.getElementById("cyclonestat").innerHTML = myObj.cyclone;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = xmlhttp.responseText;
