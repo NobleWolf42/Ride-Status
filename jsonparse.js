@@ -19,9 +19,9 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function update() {
-    document.getElementById("cyclonestat").innerHTML = ocpl[myObj.cyclone.status];
+    document.getElementById("cyclonestat").innerHTML = opcl[myObj.cyclone.status];
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
-    document.getElementById("chairstat").innerHTML = ocpl[myObj.cyclone.chair];
+    document.getElementById("chairstat").innerHTML = opcl[myObj.chair.status];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
 //    document.getElementById("mazestat").innerHTML = myObj.cyclone["status"];
 //    document.getElementById("mazenote").innerHTML = jarray[0]["maze"]["notes"];
