@@ -7,17 +7,10 @@ var status = new Array();
     status[2]="Temporaly Closed for Weather";
     status[3]="Temporaly Closed for Maintence";
 
-xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myOBJ = JSON.parse(xmlhttp.responseText);
-		update();
-		}
-}
-
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
 function update() {
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+    myOBJ = JSON.parse(xmlhttp.responseText);
     document.getElementById("cyclonestat").innerHTML = myObj.cyclone;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = status[jarray[0]["chair"]["status"]];
