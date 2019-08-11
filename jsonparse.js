@@ -21,9 +21,9 @@ xmlhttp.send();
 function update() {
     document.getElementById("cyclonestat").innerHTML = myObj;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
-    document.getElementById("chairstat").innerHTML = myObj.cyclone.status;
+    document.getElementById("chairstat").innerHTML = myObj.cyclone;
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
-//    document.getElementById("mazestat").innerHTML = status[jarray[0]["maze"]["status"]];
+    document.getElementById("mazestat").innerHTML = myObj.cyclone.status;
 //    document.getElementById("mazenote").innerHTML = jarray[0]["maze"]["notes"];
 //    document.getElementById("alpinestat").innerHTML = status[jarray[0]["alpine"]["status"]];
 //    document.getElementById("alpinenote").innerHTML = jarray[0]["alpine"]["notes"];
