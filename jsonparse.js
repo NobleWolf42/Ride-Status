@@ -10,7 +10,7 @@ var status = new Array();
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        myObj = xmlhttp.responseText;
+        myObj = JSON.parse(xmlhttp.responseText);
 		update();
 		}
 }
