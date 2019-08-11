@@ -13,7 +13,7 @@ function update() {
     myOBJ = JSON.parse(xmlhttp.responseText);
     document.getElementById("cyclonestat").innerHTML = myObj.cyclone;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
-    document.getElementById("chairstat").innerHTML = status[jarray[0]["chair"]["status"]];
+    document.getElementById("chairstat").innerHTML = xmlhttp.responseText;
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
 //    document.getElementById("mazestat").innerHTML = status[jarray[0]["maze"]["status"]];
 //    document.getElementById("mazenote").innerHTML = jarray[0]["maze"]["notes"];
