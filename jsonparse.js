@@ -21,7 +21,7 @@ xmlhttp.send();
 function update() {
     document.getElementById("cyclonestat").innerHTML = myObj;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
-    document.getElementById("chairstat").innerHTML = myObj.cyclone;
+    document.getElementById("chairstat").innerHTML = myObj."cyclone";
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
     document.getElementById("mazestat").innerHTML = myObj.cyclone.status;
 //    document.getElementById("mazenote").innerHTML = jarray[0]["maze"]["notes"];
