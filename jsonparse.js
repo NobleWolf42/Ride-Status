@@ -1,16 +1,22 @@
 var url = "/RideStatus/data.json";
 var xmlhttp = new XMLHttpRequest();
+var myObj = {not:"working"};
 
 var status = new Array();
+    status[0]="Open";
+    status[1]="Closed";
+    status[2]="Temporaly Closed for Weather";
+    status[3]="Temporaly Closed for Maintence";
 
-status[0]="Open";
-status[1]="Closed";
-status[2]="Temporaly Closed for Weather";
-status[3]="Temporaly Closed for Maintence";
+xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+        myOBJ = JSON.parse(xmlhttp.responseText);
+		update();
+		}
+}
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
-myOBJ = JSON.parse(xmlhttp.responseText);
 
 function update() {
     document.getElementById("cyclonestat").innerHTML = myObj.cyclone;
