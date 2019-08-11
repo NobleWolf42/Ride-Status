@@ -14,9 +14,10 @@ xmlhttp.onreadystatechange = function() {
 		}
 }
 
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
 function update(jarray) {
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
     document.getElementById("cyclonestat").innerHTML = status[jarray[0]["cyclone"]["status"]];
     document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = status[jarray[0]["cyclone"]["status"]];
