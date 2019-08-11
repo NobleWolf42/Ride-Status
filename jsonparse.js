@@ -2,11 +2,11 @@ var url = "/RideStatus/data.json";
 var xmlhttp = new XMLHttpRequest();
 myObj = {"not":"working", "count":42};
 
-var status = new Array();
-    status[0]="Open";
-    status[1]="Closed";
-    status[2]="Temporaly Closed for Weather";
-    status[3]="Temporaly Closed for Maintence";
+var opcl = new Array();
+    opcl[0]="Open";
+    opcl[1]="Closed";
+    opcl[2]="Temporaly Closed for Weather";
+    opcl[3]="Temporaly Closed for Maintence";
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
