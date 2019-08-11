@@ -9,7 +9,7 @@ var status = new Array();
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var myArr = JSON.parse("[" + xmlhttp.responseText + "]");
+        var myArr = JSON.parse(xmlhttp.responseText);
 		update(myArr);
 		}
 }
@@ -18,7 +18,7 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function update(jarray) {
-    document.getElementById("cyclonestat").innerHTML = JSON.parse(xmlhttp.responseText);
+    document.getElementById("cyclonestat").innerHTML = myArr;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = status[jarray[0]["chair"]["status"]];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
