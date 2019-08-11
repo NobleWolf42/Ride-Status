@@ -9,16 +9,16 @@ var status = new Array();
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var myArr = JSON.parse(xmlhttp.responseText);
-		update(myArr);
+        myOBJ = JSON.parse(xmlhttp.responseText);
+		update();
 		}
 }
 
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-function update(jarray) {
-    document.getElementById("cyclonestat").innerHTML = jarray.cyclone;
+function update() {
+    document.getElementById("cyclonestat").innerHTML = myObj.cyclone;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = status[jarray[0]["chair"]["status"]];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
