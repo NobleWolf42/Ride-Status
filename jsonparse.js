@@ -23,7 +23,7 @@ function update() {
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = myObj["chair"];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
-    document.getElementById("mazestat").innerHTML = myObj.cyclone["status"];
+//    document.getElementById("mazestat").innerHTML = myObj.cyclone["status"];
 //    document.getElementById("mazenote").innerHTML = jarray[0]["maze"]["notes"];
 //    document.getElementById("alpinestat").innerHTML = status[jarray[0]["alpine"]["status"]];
 //    document.getElementById("alpinenote").innerHTML = jarray[0]["alpine"]["notes"];
