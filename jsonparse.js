@@ -19,7 +19,7 @@ xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
 function update() {
-    document.getElementById("cyclonestat").innerHTML = JSON.stringify(myObj);
+    document.getElementById("cyclonestat").innerHTML = myObj;
 //    document.getElementById("cyclonenote").innerHTML = jarray[0]["cyclone"]["notes"];
     document.getElementById("chairstat").innerHTML = myObj["chair"];
 //    document.getElementById("chairnote").innerHTML = jarray[0]["chair"]["notes"];
