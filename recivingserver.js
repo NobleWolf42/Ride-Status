@@ -12,7 +12,7 @@ app.use(myParser.json());
 
 app.post("/submitjson", function(request, response) {
     console.log(request.body);
-    fs.writeFile("/var/www/html/RideStatus/test.json", stringify(request), function(err) {
+    fs.writeFile("/var/www/html/RideStatus/test.json", stringify(request.body), function(err) {
         if(err) {
             return console.log(err);
         }
