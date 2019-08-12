@@ -4,7 +4,7 @@ var myParser = require("body-parser");
 var app = express();
 const fs = require('fs');
 
-app.use(myParser.json();
+app.use(myParser.json());
 app.post("/submitjson", function(request, response) {
     fs.writeFile("/tmp/test.json", request, function(err) {
         if(err) {
