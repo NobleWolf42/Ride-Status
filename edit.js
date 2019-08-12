@@ -64,3 +64,4 @@ function update() {
 };
 
 window.onload=update;
+setInterval ( update, 600000 );
