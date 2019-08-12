@@ -7,7 +7,7 @@ const fs = require('fs');
 app.use(myParser.text());
 app.post("/submitjson", function(request, response) {
     console.log(request.body);
-    fs.writeFile("/var/www/html/RideStatus/test.json", request, function(err) {
+    fs.writeFile("/var/www/html/RideStatus/test.json", JSON.parse(request), function(err) {
         if(err) {
             return console.log(err);
         }
