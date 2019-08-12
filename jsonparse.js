@@ -64,4 +64,3 @@ function update() {
 };
 
 window.onload=update;
-setInterval ( update, 60000 );
