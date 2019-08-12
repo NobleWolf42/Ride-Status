@@ -4,7 +4,6 @@ var myParser = require("body-parser");
 var cors = require('cors');
 var app = express();
 const fs = require('fs');
-//const stringify = require('json-stringify-safe')
 
 app.use(cors());
 
