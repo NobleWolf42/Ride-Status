@@ -4,7 +4,7 @@ var myParser = require("body-parser");
 var cors = require('cors');
 var app = express();
 const fs = require('fs');
-const stringify = require('json-stringify-safe')
+//const stringify = require('json-stringify-safe')
 
 app.use(cors());
 
@@ -12,7 +12,7 @@ app.use(myParser.json());
 
 app.post("/submitjson", function(request, response) {
     console.log(request.body);
-    fs.writeFile("/var/www/html/RideStatus/test.json", stringify(request.body), function(err) {
+    fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
             return console.log(err);
         }
