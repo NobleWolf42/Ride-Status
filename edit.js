@@ -58,7 +58,7 @@ function update() {
 };
 
 function sendjsondata() {
-    var jsonurl = "/submitjson";
+    var jsonurl = ":3000/submitjson";
     var jsonhttp = new XMLHttpRequest();
     var dataObj = new Object();
     
