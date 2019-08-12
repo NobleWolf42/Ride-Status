@@ -70,7 +70,7 @@ function sendjsondata() {
     }
     
     dataObj.cyclone.status = document.getElementById("cyclonestat").selectedIndex;
-    dataObj.cyclone.notes = document.getElementById("cycldataObj.umbrella.status = onenote").value;
+    dataObj.cyclone.notes = document.getElementById("cyclonenote").value;
     dataObj.chair.status = document.getElementById("chairstat").selectedIndex;
     dataObj.chair.notes = document.getElementById("chairnote").value;
     dataObj.maze.status = document.getElementById("mazestat").selectedIndex;
