@@ -24,7 +24,7 @@ function update() {
     //    document.getElementById("cyclonenote").innerHTML = myObj.cyclone.notes;
         document.getElementById("chairstat").innerHTML = opcl[myObj.chair.status];
     //    document.getElementById("chairnote").innerHTML = myObj.chair.notes;
-        document.getElementById("mazestat").innerHTML = "Test";
+        document.getElementById("mazestat").innerHTML = opcl[myObj.maze.status];
     //    document.getElementById("mazenote").innerHTML = myObj.maze.notes;
     //    document.getElementById("alpinestat").innerHTML = opcl[myObj.alpine.status];
     //    document.getElementById("alpinenote").innerHTML = myObj.alpine.notes;
