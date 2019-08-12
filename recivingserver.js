@@ -10,9 +10,9 @@ app.use(cors());
 app.use(myParser.json());
 
 app.post("/submitjson", function(request, response) {
-    //console.log(request.body);
-    newjsondata = JSON.stringify(request);
-    console.log(newjsondata);
+    console.log(request.body);
+    console.log("BREAK HERE");
+    console.log(JSON.stringify(request));
     fs.writeFile("/var/www/html/RideStatus/test.json", newjsondata, function(err) {
         if(err) {
             return console.log(err);
