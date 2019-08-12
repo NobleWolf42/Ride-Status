@@ -1,11 +1,8 @@
 //Import the necessary libraries/declare the necessary objects
 var express = require("express");
 var myParser = require("body-parser");
-var cors = require('cors');
 var app = express();
 const fs = require('fs');
-
-app.use(cors());
 
 app.use(myParser.text());
 
