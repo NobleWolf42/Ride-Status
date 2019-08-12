@@ -112,8 +112,8 @@ function sendjsondata() {
 
     jsonhttp.open("POST", jsonurl, true);
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
-    console.log(dataObj);
-    jsonhttp.send(dataObj);
+    console.log(json.stringify(dataObj));
+    jsonhttp.send(json.stringify(dataObj));
 };
 
 window.onload=update;
