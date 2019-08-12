@@ -7,7 +7,7 @@ const fs = require('fs');
 
 app.use(cors());
 
-app.use(myParser.text());
+app.use(myParser.JSON());
 
 app.post("/submitjson", function(request, response) {
     console.log(request.body);
