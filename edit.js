@@ -1,7 +1,8 @@
+myObj = {"not":"working", "count":42};
+
 function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    myObj = {"not":"working", "count":42};
     
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -60,7 +61,7 @@ function update() {
 function sendjsondata() {
     var jsonurl = ":3000/submitjson";
     var jsonhttp = new XMLHttpRequest();
-    var dataObj = new Object();
+    var dataObj = myObj;
     
     jsonhttp.onreadystatechange = function() {
         if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
