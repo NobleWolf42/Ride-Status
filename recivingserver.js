@@ -6,6 +6,7 @@ const fs = require('fs');
 
 app.use(myParser.json());
 app.post("/submitjson", function(request, response) {
+    console.log(request.body);
     fs.writeFile("/tmp/test.json", request, function(err) {
         if(err) {
             return console.log(err);
