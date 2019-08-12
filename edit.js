@@ -111,6 +111,8 @@ function sendjsondata() {
     dataObj.ski.notes = document.getElementById("skinote").value;
 
     jsonhttp.open("POST", jsonurl, true);
+    jsonhttp.setRequestHeader('Content-Type', 'application/json');
+    console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
 };
 
