@@ -8,6 +8,7 @@ function update() {
         opcl[1]="Closed";
         opcl[2]="Temporaly Closed for Weather";
         opcl[3]="Temporaly Closed for Maintence";
+        opcl[4]="Closed for The Season";
     
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
