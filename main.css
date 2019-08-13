@@ -1,5 +1,5 @@
 body {
-    background-image: url(background.jpg)
+    background-image: url(background.jpg);
 }
 
 table {
@@ -9,8 +9,9 @@ table {
 }
  
 td, th {
-  border: 1px solid #070707;
+  border: 1px solid #ffffff;
   text-align: left;
+  color: #ffffff;
   padding: 8px;
 }
   
