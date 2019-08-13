@@ -1,5 +1,6 @@
 body {
     background-image: url(background.jpg);
+    background-size: 100%;
 }
 
 table {
@@ -17,4 +18,8 @@ td, th {
   
 tr:nth-child(even) {
   background-color: #686464;
+}
+
+h1 {
+    color: #ffffff;
 }
