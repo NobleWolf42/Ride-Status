@@ -1,4 +1,4 @@
-const {app, BrowserWindow, Tray, Menu} = require('electron')
+const {app, BrowserWindow, Tray, Menu, dialog} = require('electron')
 const url = require('url')
 const path = require('path')
 const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
@@ -70,6 +70,28 @@ function newold() {
     myObj = {};
     differences = {};
     
+    var titles = new Array();
+        titles["cyclone"]="Blue Cyclone";
+        titles["chair"]="Chair Swing";
+        titles["maze"]="Amaze'N Maze";
+        titles["alpine"]="Alpine Slide";
+        titles["chute"]="Shoot-the-Chute";
+        titles["chairlift"]="Scenic Chairlift";	
+        titles["rockwall"]="Rock Wall";
+        titles["golf"]="Mini-Golf";
+        titles["lightnin"]="Lightnin'";
+        titles["carousel"]="Carousel";
+        titles["umbrella"]="Umbrella Rides";
+        titles["kiddieland"]="Kiddie Land & Train";
+        titles["ice"]="Ice Skating";
+        titles["bumpercars"]="Ice Bumper Cars";
+        titles["wildlife"]="Wildlife Encounter";
+        titles["coaster"]="Ski Mountain Coaster";
+        titles["stubing"]="Summer Tubing";
+        titles["tramway"]="Aerial Tramway";
+        titles["wtubing"]="Winter Tubing";
+        titles["ski"]="Ski Slopes";
+
     var opcl = new Array();
         opcl[0]="Open";
         opcl[1]="Closed";
@@ -96,7 +118,7 @@ function newold() {
             return obj1;
         }
         // Variables
-        var diffs = {};
+        var diffs = {"nope":"noo"};
         var key;
         // Compare our objects
         // Loop through the first object
@@ -126,6 +148,9 @@ function newold() {
             // If items are different types
             if (type1 !== type2) {
                 diffs[key] = item2;
+                if (diffs.nope == "noo") {
+                    delete diffs.nope;
+                }
                 return;
             }
 
@@ -133,6 +158,9 @@ function newold() {
             if (type1 === '[object Object]') {
                 if (JSON.stringify(item1) != JSON.stringify(item2)) {
                     diffs[key] = item2;
+                    if (diffs.nope == "noo") {
+                        delete diffs.nope;
+                    }
                 }
                 return;
             }
@@ -140,7 +168,10 @@ function newold() {
             // If an array, compare
             if (type1 === '[object Array]') {
                 if (!arraysMatch(item1, item2)) {
-                 diffs[key] = item2;
+                    diffs[key] = item2;
+                    if (diffs.nope == "noo") {
+                        delete diffs.nope;
+                    }
                 }
                 return;
             }
@@ -150,10 +181,16 @@ function newold() {
             if (type1 === '[object Function]') {
                 if (item1.toString() !== item2.toString()) {
                     diffs[key] = item2;
+                    if (diffs.nope == "noo") {
+                        delete diffs.nope;
+                    }
                 }
             } else {
                 if (item1 !== item2 ) {
                     diffs[key] = item2;
+                    if (diffs.nope == "noo") {
+                        delete diffs.nope;
+                    }
                 }
             }
         };
@@ -163,6 +200,9 @@ function newold() {
             if (obj2.hasOwnProperty(key)) {
                 if (!obj1[key] && obj1[key] !== obj2[key] ) {
                     diffs[key] = obj2[key];
+                    if (diffs.nope == "noo") {
+                        delete diffs.nope;
+                    }
                 }
             }
         }
@@ -174,12 +214,26 @@ function newold() {
         diff(oldObj, myObj);
         console.log("Differences:");
         console.log(differences);
+        msg = ''
         for (key in differences) {
             console.log(differences[key])
             key22 = differences[key]
-            for (key in key22) {
-                console.log(key22[key])
-            }
+            msg = msg + titles[key] + ' is now ' + opcl[key22.status] + '. Notes: ' + key22.notes + '\n'
+        }
+        if (differences.nope != "noo") {
+            dialog.showMessageBox(
+                new BrowserWindow({
+                  show: false,
+                  alwaysOnTop: true
+                }),
+                {
+                  type: 'error',
+                  message: msg,
+                  title: "Ride Status Update",
+                  icon: path.join(__dirname,'icon.ico')
+                }
+            )
+            oldObj = myObj
         }
     }
 }
