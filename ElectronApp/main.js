@@ -8,9 +8,29 @@ let win
 let isQuiting
 
 var oldObj = {"yeet":"Hi"};
+var shown = true;
+
+function endis() {
+    if (shown) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+function disen() {
+    if (!shown) {
+        return true
+    }
+    else {
+        return false
+    }
+}
+
 
 function createWindow() {
-   win = new BrowserWindow({width: 800, height: 600, icon: path.join(__dirname,'icon.ico') }) //frame: false
+   win = new BrowserWindow({width: 1600, height: 900, icon: path.join(__dirname,'icon.ico'), frame: false })
    win.loadURL(url.format ({
       pathname: path.join(__dirname, 'index.html'),
       protocol: 'file:',
@@ -36,22 +56,23 @@ function createWindow() {
     const trayMenuTemplate = [
         {
             label: 'Show Ride Status',
-                click: function() {
-                    console.log("Clicked on Show")
-                    win.show()
-                }
+            click: function() {
+                console.log("Clicked on Show")
+                win.show()
+            }
         },
-            
+        
         {
-            label: 'Help',
-                click: function () {
-                console.log("Clicked on Help")
+            label: 'Hide Ride Status',
+            click: function() {
+                console.log("Clicked on Hide")
+                win.hide()
             }
         },
 
         {
             label: 'Exit',
-                click: function () {
+            click: function () {
                 console.log("Clicked on Exit")
                 app.isQuiting = true
                 app.quit()
