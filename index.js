@@ -26,6 +26,7 @@ function update() {
             document.getElementById('"' + key + 'stat"').innerHTML = opcl[myObj.key.status];
             document.getElementById('"' + key + 'note"').innerHTML = myObj.key.notes;
             document.getElementById('"' + key + 'pic"').src = '"' + myObj.key.status + '.png"';
+            console.log("Here");
             console.log('"' + myObj.key.status + '.png"');
         }
     }
