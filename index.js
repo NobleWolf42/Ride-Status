@@ -23,6 +23,7 @@ function update() {
     function myProc(obj1) {
         var key;
         for (key in obj1) {
+            console.log(obj1.key);
             document.getElementById('"' + key + 'stat"').innerHTML = opcl[obj1.key.status];
             document.getElementById('"' + key + 'note"').innerHTML = obj1.key.notes;
             document.getElementById('"' + key + 'pic"').src = obj1.key.status + '.png';
