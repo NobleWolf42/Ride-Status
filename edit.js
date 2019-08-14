@@ -17,8 +17,8 @@ function update() {
     function myProc(obj1) {
         var key;
         for (key in obj1) {
-            document.getElementById('"' + key + 'stat"').selectedIndex = myObj.key.status;
-            document.getElementById('"' + key + 'note"').value = myObj.key.notes;
+            document.getElementById(key + "stat").selectedIndex = myObj[key].status;
+            document.getElementById(key + "note").value = myObj[key].notes;
         }
     }
 };
