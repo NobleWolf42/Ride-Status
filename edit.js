@@ -1,7 +1,7 @@
 myObj = {"not":"working", "count":42};
 
 function update() {
-    var url = "/RideStatus/data.json";
+    var url = "/RideStatus/data.json?nocache=" + new Date()).getTime();
     var xmlhttp = new XMLHttpRequest();
     
     xmlhttp.onreadystatechange = function() {
