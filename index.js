@@ -22,10 +22,10 @@ function update() {
     
     function myProc(obj1) {
         var key;
-        var stat = '"' + key + 'stat"';
-        var note = '"' + key + 'note"';
-        var pic = '"' + key + 'pic"';
         for (key in obj1) {
+            var stat = '"' + key + 'stat"';
+            var note = '"' + key + 'note"';
+            var pic = '"' + key + 'pic"';
             console.log('"' + key + 'stat"');
             document.getElementById(stat).innerHTML = opcl[obj1[key].status];
             document.getElementById(note).innerHTML = obj1.key.notes;
