@@ -22,11 +22,14 @@ function update() {
     
     function myProc(obj1) {
         var key;
+        var stat = '"' + key + 'stat"';
+        var note = '"' + key + 'note"';
+        var pic = '"' + key + 'pic"';
         for (key in obj1) {
             console.log('"' + key + 'stat"');
-            document.getElementById('"' + key + 'stat"').innerHTML = opcl[obj1[key].status];
-            document.getElementById('"' + key + 'note"').innerHTML = obj1.key.notes;
-            document.getElementById('"' + key + 'pic"').src = obj1.key.status + '.png';
+            document.getElementById(stat).innerHTML = opcl[obj1[key].status];
+            document.getElementById(note).innerHTML = obj1.key.notes;
+            document.getElementById(pic).src = obj1.key.status + '.png';
         }
     }
 };
