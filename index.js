@@ -13,15 +13,20 @@ function update() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
-    		myProc();
+    		myProc(myObj);
     		}
     }
     
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     
-    function myProc() {
-        document.getElementById("cyclonestat").innerHTML = opcl[myObj.cyclone.status];
+    function myProc(obJ1) {
+        var key;
+        for (key in obj1) {
+            document.getElementById('"' + key + 'stat"').innerHTML = opcl[myObj.key.status];
+        }
+
+        /*document.getElementById("cyclonestat").innerHTML = opcl[myObj.cyclone.status];
         document.getElementById("cyclonenote").innerHTML = myObj.cyclone.notes;
         document.getElementById("chairstat").innerHTML = opcl[myObj.chair.status];
         document.getElementById("chairnote").innerHTML = myObj.chair.notes;
@@ -60,7 +65,7 @@ function update() {
         document.getElementById("wtubingstat").innerHTML = opcl[myObj.wtubing.status];
         document.getElementById("wtubingnote").innerHTML = myObj.wtubing.notes;
         document.getElementById("skistat").innerHTML = opcl[myObj.ski.status];
-        document.getElementById("skinote").innerHTML = myObj.ski.notes;
+        document.getElementById("skinote").innerHTML = myObj.ski.notes;*/
     }
 };
 
