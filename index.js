@@ -20,7 +20,7 @@ function update() {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     
-    function myProc(obJ1) {
+    function myProc(obj1) {
         var key;
         for (key in obj1) {
             document.getElementById('"' + key + 'stat"').innerHTML = opcl[myObj.key.status];
