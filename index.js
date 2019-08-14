@@ -25,7 +25,7 @@ function update() {
         for (key in obj1) {
             document.getElementById('"' + key + 'stat"').innerHTML = opcl[myObj.key.status];
             document.getElementById('"' + key + 'note"').innerHTML = myObj.key.notes;
-            document.getElementById('"' + key + 'pic"').src = myObj.key.status + ".png";
+            document.getElementById('"' + key + 'pic"').src = '"' + myObj.key.status + '.png"';
         }
     }
 };
