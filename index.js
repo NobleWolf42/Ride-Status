@@ -27,6 +27,9 @@ function update() {
             var note = '"' + key + 'note"';
             var pic = '"' + key + 'pic"';
             console.log('"' + key + 'stat"');
+            console.log(note);
+            console.log(pic);
+            console.log(stat);
             document.getElementById(stat).innerHTML = opcl[obj1[key].status];
             document.getElementById(note).innerHTML = obj1.key.notes;
             document.getElementById(pic).src = obj1.key.status + '.png';
