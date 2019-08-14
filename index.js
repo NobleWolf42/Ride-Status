@@ -23,9 +23,9 @@ function update() {
     function myProc(obj1) {
         var key;
         for (key in obj1) {
-            document.getElementById('"' + key + 'stat"').innerHTML = opcl[myObj.key.status];
-            document.getElementById('"' + key + 'note"').innerHTML = myObj.key.notes;
-            document.getElementById('"' + key + 'pic"').src = myObj.key.status + '.png';
+            document.getElementById('"' + key + 'stat"').innerHTML = opcl[obj1.key.status];
+            document.getElementById('"' + key + 'note"').innerHTML = obj1.key.notes;
+            document.getElementById('"' + key + 'pic"').src = obj1.key.status + '.png';
         }
     }
 };
