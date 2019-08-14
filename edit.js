@@ -7,54 +7,19 @@ function update() {
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
-    		myProc();
+    		myProc(myObj);
     		}
     }
     
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     
-    function myProc() {
-        document.getElementById("cyclonestat").selectedIndex = myObj.cyclone.status;
-        document.getElementById("cyclonenote").value = myObj.cyclone.notes;
-        document.getElementById("chairstat").selectedIndex = myObj.chair.status;
-        document.getElementById("chairnote").value = myObj.chair.notes;
-        document.getElementById("mazestat").selectedIndex = myObj.maze.status;
-        document.getElementById("mazenote").value = myObj.maze.notes;
-        document.getElementById("alpinestat").selectedIndex = myObj.alpine.status;
-        document.getElementById("alpinenote").value = myObj.alpine.notes;
-        document.getElementById("chutestat").selectedIndex = myObj.chute.status;
-        document.getElementById("chutenote").value = myObj.chute.notes;
-        document.getElementById("chairliftstat").selectedIndex = myObj.chairlift.status;
-        document.getElementById("chairliftnote").value = myObj.chairlift.notes;
-        document.getElementById("rockwallstat").selectedIndex = myObj.rockwall.status;
-        document.getElementById("rockwallnote").value = myObj.rockwall.notes;
-        document.getElementById("golfstat").selectedIndex = myObj.golf.status;
-        document.getElementById("golfnote").value = myObj.golf.notes;
-        document.getElementById("lightninstat").selectedIndex = myObj.lightnin.status;
-        document.getElementById("lightninnote").value = myObj.lightnin.notes;
-        document.getElementById("carouselstat").selectedIndex = myObj.carousel.status;
-        document.getElementById("carouselnote").value = myObj.carousel.notes;
-        document.getElementById("umbrellastat").selectedIndex = myObj.umbrella.status;
-        document.getElementById("umbrellanote").value = myObj.umbrella.notes;
-        document.getElementById("kiddielandstat").selectedIndex = myObj.kiddieland.status;
-        document.getElementById("kiddielandnote").value = myObj.kiddieland.notes;
-        document.getElementById("icestat").selectedIndex = myObj.ice.status;
-        document.getElementById("icenote").value = myObj.ice.notes;
-        document.getElementById("bumpercarsstat").selectedIndex = myObj.bumpercars.status;
-        document.getElementById("bumpercarsnote").value = myObj.bumpercars.notes;
-        document.getElementById("wildlifestat").selectedIndex = myObj.wildlife.status;
-        document.getElementById("wildlifenote").value = myObj.wildlife.notes;
-        document.getElementById("coasterstat").selectedIndex = myObj.coaster.status;
-        document.getElementById("coasternote").value = myObj.coaster.notes;
-        document.getElementById("stubingstat").selectedIndex = myObj.stubing.status;
-        document.getElementById("stubingnote").value = myObj.stubing.notes;
-        document.getElementById("tramwaystat").selectedIndex = myObj.tramway.status;
-        document.getElementById("tramwaynote").value = myObj.tramway.notes;
-        document.getElementById("wtubingstat").selectedIndex = myObj.wtubing.status;
-        document.getElementById("wtubingnote").value = myObj.wtubing.notes;
-        document.getElementById("skistat").selectedIndex = myObj.ski.status;
-        document.getElementById("skinote").value = myObj.ski.notes;
+    function myProc(obj1) {
+        var key;
+        for (key in obj1) {
+            document.getElementById('"' + key + 'stat"').selectedIndex = myObj.key.status;
+            document.getElementById('"' + key + 'note"').value = myObj.key.notes;
+        }
     }
 };
 
