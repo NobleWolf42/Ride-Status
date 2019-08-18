@@ -6,6 +6,7 @@ body {
 body * {
   box-sizing: border-box;
 }
+
 .header {
   background-color: #327a81;
   color: white;
