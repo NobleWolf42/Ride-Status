@@ -23,7 +23,7 @@ function update() {
     };
 };
 
-/*function sendjsondata() {
+function sendjsondata() {
     var jsonurl = "http://www.noblewolf42.com:3000/submitjson";
     var jsonhttp = new XMLHttpRequest();
     var dataObj = myObj;
@@ -77,7 +77,7 @@ function update() {
     /*dataObj.wtubing.status = document.getElementById("wtubingstat").selectedIndex;
     dataObj.wtubing.notes = document.getElementById("wtubingnote").value;
     dataObj.ski.status = document.getElementById("skistat").selectedIndex;
-    dataObj.ski.notes = document.getElementById("skinote").value;*//*
+    dataObj.ski.notes = document.getElementById("skinote").value;*/
 
     jsonhttp.open("POST", jsonurl, true);
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
@@ -103,6 +103,6 @@ function update() {
 
 function hidestatus() {
     document.getElementById("poststatus").hidden = true;
-};*/
+};
 
 window.onload=update;
