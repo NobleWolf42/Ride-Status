@@ -86,6 +86,7 @@ img {
   position: absolute;
   z-index: 100;
   top: 20px;
+  left: 10%;
 }
 
 .poststatus {
