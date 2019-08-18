@@ -84,14 +84,14 @@ function sendjsondata() {
 
     if (saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
-        document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  <a href="#" onclick="hidestatus()"><u><b>X</b></u></a>';
+        document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#006e33";
         document.getElementById("poststatusdiv").style.backgroundColor = "#2bd487";
         setTimeout(hidestatus, 10000);
     }
     if (!saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
-        document.getElementById("poststatus").innerHTML = 'An ERROR has occurred, please try again!!!  <a href="#" onclick="hidestatus()"><u><b>X</b></u></a>';
+        document.getElementById("poststatus").innerHTML = 'An ERROR has occurred, please try again!!!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#bb0706";
         document.getElementById("poststatusdiv").style.backgroundColor = "#cb344a";
         setTimeout(hidestatus, 10000);
