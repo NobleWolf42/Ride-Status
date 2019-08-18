@@ -15,13 +15,13 @@ function update() {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
     
-    function myProc(obj1) {
+    /*function myProc(obj1) {
         var key;
         for (key in obj1) {
             document.getElementById(key + "stat").selectedIndex = obj1[key].status;
             document.getElementById(key + "note").value = obj1[key].notes;
         }
-    }
+    }*/
 };
 
 function sendjsondata() {
