@@ -36,7 +36,7 @@ function sendjsondata() {
             saved = JSON.parse(jsonhttp.responseText);
             console.log(saved);
             console.log(saved.success);
-            customalert;
+            customalert(saved.success);
     		};
     };
     
@@ -89,8 +89,8 @@ function sendjsondata() {
     console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
 
-    function customalert() {
-        if (saved.success == true) {
+    function customalert(tf) {
+        if (tf == true) {
             console.log("!TRUE!");
             document.getElementById("poststatusdiv").hidden = false;
             document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
@@ -98,7 +98,7 @@ function sendjsondata() {
             document.getElementById("poststatusdiv").style.backgroundColor = "#2bd487";
             setTimeout(hidestatus, 10000);
         }
-        if (saved.success == false) {
+        if (tf == false) {
             console.log("!FALSE!");
             document.getElementById("poststatusdiv").hidden = false;
             document.getElementById("poststatus").innerHTML = 'An ERROR has occurred, please try again!!!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
