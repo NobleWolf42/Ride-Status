@@ -27,6 +27,7 @@ function sendjsondata() {
     var jsonurl = "http://www.noblewolf42.com:3000/submitjson";
     var jsonhttp = new XMLHttpRequest();
     var dataObj = myObj;
+    var saved = {};
     
     jsonhttp.onreadystatechange = function() {
         if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
@@ -79,6 +80,26 @@ function sendjsondata() {
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
     console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
+    saved = jsonhttp.response();
+
+    if (saved.success) {
+        document.getElementById("poststatusdiv").hidden = false;
+        document.getElementById("poststatus").innerHTML = "The information has been successfully saved!";
+        document.getElementById("poststatusdiv").style.color = "#006e33";
+        document.getElementById("poststatusdiv").style.backgroundColor = "#2bd487";
+        setTimeout(hidestatus, 10000);
+    }
+    if (!saved.success) {
+        document.getElementById("poststatusdiv").hidden = false;
+        document.getElementById("poststatus").innerHTML = "An ERROR has occurred, please try again!!!";
+        document.getElementById("poststatusdiv").style.color = "#bb0706";
+        document.getElementById("poststatusdiv").style.backgroundColor = "#cb344a";
+        setTimeout(hidestatus, 10000);
+    }
 };
+
+function hidestatus() {
+    document.getElementById("poststatus").hidden = true;
+}
 
 window.onload=update;

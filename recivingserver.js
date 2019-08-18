@@ -15,13 +15,13 @@ app.post("/submitjson", function(request, response) {
         if(err) {
             console.log(err);
             response.send({ 
-                Sucess: false
+                success: false
             });
         }
         else {
             console.log("The file was saved!");
             response.send({ 
-                Sucess: true
+                success: true
             });
         }
     });
