@@ -17,8 +17,7 @@ body * {
   width: calc(70% - 2em);
   position: absolute;
   top: 10px;
-  left: 15%;
-  right: 15%;
+  left: calc(15% + 1em);
 }
 
 .header {
@@ -86,7 +85,7 @@ img {
   position: absolute;
   z-index: 100;
   top: 20px;
-  left: 10%;
+  left: calc(10% + 1em);
 }
 
 .poststatus {
