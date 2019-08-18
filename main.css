@@ -10,7 +10,7 @@ body * {
 .table-users {
   border: 1px solid #327a81;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px #ffffff;
+  box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
   max-width: calc(100% - 2em);
   margin: 1em auto;
   overflow: hidden;
