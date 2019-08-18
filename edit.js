@@ -72,10 +72,10 @@ function sendjsondata() {
     dataObj.stubing.notes = document.getElementById("stubingnote").value;
     dataObj.tramway.status = document.getElementById("tramwaystat").selectedIndex;
     dataObj.tramway.notes = document.getElementById("tramwaynote").value;
-    dataObj.wtubing.status = document.getElementById("wtubingstat").selectedIndex;
+    /*dataObj.wtubing.status = document.getElementById("wtubingstat").selectedIndex;
     dataObj.wtubing.notes = document.getElementById("wtubingnote").value;
     dataObj.ski.status = document.getElementById("skistat").selectedIndex;
-    dataObj.ski.notes = document.getElementById("skinote").value;
+    dataObj.ski.notes = document.getElementById("skinote").value;*/
 
     jsonhttp.open("POST", jsonurl, true);
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
