@@ -36,6 +36,7 @@ function sendjsondata() {
     		}
     }
     
+    console.log(document.getElementById("cyclonestat").selectedIndex);
     console.log(document.getElementById("tramwaystat").selectedIndex);
 
     dataObj.cyclone.status = document.getElementById("cyclonestat").selectedIndex;
