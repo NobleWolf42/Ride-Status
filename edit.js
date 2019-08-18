@@ -14,7 +14,7 @@ function update() {
     };
 
     xmlhttp.open("GET", url, true);
-    xmlhttp.send();*/
+    xmlhttp.send();
     
     function myProc(obj1) {
         var key;
