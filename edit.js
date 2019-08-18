@@ -33,7 +33,7 @@ function sendjsondata() {
     
     jsonhttp.onreadystatechange = function() {
         if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
-            saved = jsonhttp.responseXML;
+            saved = JSON.parse(jsonhttp.responseText);
             console.log(saved);
     		};
     };
