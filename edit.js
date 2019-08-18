@@ -3,15 +3,15 @@ myObj = {"not":"working", "count":42};
 function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    console.log("here")
+    console.log("here");
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             console.log(xmlhttp.responseText);
     		/*myProc(myObj);*/
-    		}
-    }
+    		};
+    };
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
@@ -21,8 +21,8 @@ function update() {
         for (key in obj1) {
             document.getElementById(key + "stat").selectedIndex = obj1[key].status;
             document.getElementById(key + "note").value = obj1[key].notes;
-        }
-    }*/
+        };
+    };*/
 };
 
 function sendjsondata() {
@@ -34,8 +34,8 @@ function sendjsondata() {
     jsonhttp.onreadystatechange = function() {
         if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
             alert(jsonhttp.responseText);
-    		}
-    }
+    		};
+    };
     
     console.log(document.getElementById("cyclonestat").selectedIndex);
     console.log(document.getElementById("tramwaystat").selectedIndex);
