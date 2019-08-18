@@ -3,9 +3,6 @@ myObj = {"not":"working", "count":42};
 function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -13,10 +10,14 @@ function update() {
     		myProc(myObj);
     		}
     }
+
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
     
     function myProc(obj1) {
         var key;
         for (key in obj1) {
+            console.log(key + "stat");
             document.getElementById(key + "stat").selectedIndex = obj1[key].status;
             document.getElementById(key + "note").value = obj1[key].notes;
         }
