@@ -79,8 +79,7 @@ img {
   overflow: hidden;
   width: calc(80% - 2em);
   background-color: #FF00FF;
-  font-size: 1.5em;
-  padding: 0rem;
+  position: relative;
 }
 
 .poststatus {
