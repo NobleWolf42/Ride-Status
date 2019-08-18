@@ -82,7 +82,7 @@ img {
   overflow: hidden;
   width: calc(60% - 2em);
   background-color: #FF00FF;
-  position: absolute;
+  position: fixed;
   z-index: 100;
   top: 5px;
   left: calc(20% + 1em);
