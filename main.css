@@ -80,8 +80,7 @@ img {
   width: calc(80% - 2em);
   background-color: #FF00FF;
   position: relative;
-  top: 100px;
-  left: 10%;
+  top: 20px;
 }
 
 .poststatus {
