@@ -4,15 +4,15 @@ function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
     
+    xmlhttp.open("GET", url, true);
+    xmlhttp.send();
+
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
     		myProc(myObj);
     		}
     }
-    
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
     
     function myProc(obj1) {
         var key;
