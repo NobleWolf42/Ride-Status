@@ -88,14 +88,14 @@ function sendjsondata() {
     jsonhttp.send(JSON.stringify(dataObj));
 
     if (saved.success) {
-        document.getElementById("poststatusdiv").hidden = false;
+        document.getElementById("poststatusdiv").style.display = "block";
         document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#006e33";
         document.getElementById("poststatusdiv").style.backgroundColor = "#2bd487";
         setTimeout(hidestatus, 10000);
     }
     if (!saved.success) {
-        document.getElementById("poststatusdiv").hidden = false;
+        document.getElementById("poststatusdiv")style..display = "block";
         document.getElementById("poststatus").innerHTML = 'An ERROR has occurred, please try again!!!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#bb0706";
         document.getElementById("poststatusdiv").style.backgroundColor = "#cb344a";
@@ -104,7 +104,7 @@ function sendjsondata() {
 };
 
 function hidestatus() {
-    document.getElementById("poststatus").hidden = true;
+    document.getElementById("poststatus").style.display = "none";
 };
 
 window.onload=update;
