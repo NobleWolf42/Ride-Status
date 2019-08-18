@@ -84,7 +84,7 @@ img {
   background-color: #FF00FF;
   position: absolute;
   z-index: 100;
-  top: 15px;
+  top: 5px;
   left: calc(20% + 1em);
 }
 
