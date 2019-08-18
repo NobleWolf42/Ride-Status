@@ -3,13 +3,11 @@ myObj = {"not":"working", "count":42};
 function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    console.log("here");
 
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
-            console.log(xmlhttp.responseText);
-    		/*myProc(myObj);*/
+    		myProc(myObj);
     		};
     };
 
