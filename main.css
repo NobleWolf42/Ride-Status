@@ -1,5 +1,5 @@
 body {
-  background-image: url(background.jpg);
+  background-image: #ffffff /*url(background.jpg)*/;
   background-size: 100%;
 }
 
