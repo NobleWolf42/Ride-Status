@@ -86,6 +86,7 @@ function sendjsondata() {
     console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
     saved = jsonhttp.responseText;
+    console.log(saved);
 
     if (saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
