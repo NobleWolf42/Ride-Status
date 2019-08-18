@@ -80,12 +80,12 @@ img {
   max-width: calc(100% - 2em);
   margin: 1em auto;
   overflow: hidden;
-  width: calc(80% - 2em);
+  width: calc(60% - 2em);
   background-color: #FF00FF;
   position: absolute;
   z-index: 100;
   top: 20px;
-  left: calc(10% + 1em);
+  left: calc(20% + 1em);
 }
 
 .poststatus {
