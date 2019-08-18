@@ -15,6 +15,9 @@ body * {
   margin: 1em auto;
   overflow: hidden;
   width: calc(70% - 2em);
+  position: absolute;
+  left: 15%;
+  right: 15%;
 }
 
 .header {
