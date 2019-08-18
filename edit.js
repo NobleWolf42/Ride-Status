@@ -36,6 +36,8 @@ function sendjsondata() {
     		}
     }
     
+    console.log(document.getElementById("tramwaystat").selectedIndex);
+
     dataObj.cyclone.status = document.getElementById("cyclonestat").selectedIndex;
     dataObj.cyclone.notes = document.getElementById("cyclonenote").value;
     dataObj.chair.status = document.getElementById("chairstat").selectedIndex;
@@ -70,8 +72,8 @@ function sendjsondata() {
     dataObj.coaster.notes = document.getElementById("coasternote").value;
     dataObj.stubing.status = document.getElementById("stubingstat").selectedIndex;
     dataObj.stubing.notes = document.getElementById("stubingnote").value;
-    dataObj.tramway.status = document.getElementById("tramstat").selectedIndex;
-    dataObj.tramway.notes = document.getElementById("tramnote").value;
+    dataObj.tramway.status = document.getElementById("tramwaystat").selectedIndex;
+    dataObj.tramway.notes = document.getElementById("tramwaynote").value;
     /*dataObj.wtubing.status = document.getElementById("wtubingstat").selectedIndex;
     dataObj.wtubing.notes = document.getElementById("wtubingnote").value;
     dataObj.ski.status = document.getElementById("skistat").selectedIndex;
