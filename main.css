@@ -51,24 +51,8 @@ table tr:nth-child(2n+1) {
   background-color: #edf7f8;
 }
 
-.table-users {
-  border: 1px solid #327a81;
-  border-radius: 10px;
-  box-shadow: 3px 3px 0 rgba(0, 0, 0, 0.1);
-  max-width: calc(100% - 2em);
-  margin: 1em auto;
-  overflow: hidden;
-  width: 800px;
-}
-
 tr:nth-child(even) {
   background-color: #686464;
-}
-
-h2 {
-  font-family: "Arial Narrow", Arial, sans-serif;
-  color: #fff;
-  text-align: center;
 }
 
 img {
