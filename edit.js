@@ -1,28 +1,28 @@
 myObj = {"not":"working", "count":42};
 
-/*function update() {
+function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    console.log("here");*/
+    console.log("here");
 
-    /*xmlhttp.onreadystatechange = function() {
+    xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             console.log(xmlhttp.responseText);
-    		/*myProc(myObj);*//*
+    		/*myProc(myObj);*/
     		};
-    };*/
+    };
 
-    /*xmlhttp.open("GET", url, true);
+    xmlhttp.open("GET", url, true);
     xmlhttp.send();*/
     
-    /*function myProc(obj1) {
+    function myProc(obj1) {
         var key;
         for (key in obj1) {
             document.getElementById(key + "stat").selectedIndex = obj1[key].status;
             document.getElementById(key + "note").value = obj1[key].notes;
         };
-    };*/
+    };
 };
 
 /*function sendjsondata() {
