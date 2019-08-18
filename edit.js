@@ -85,7 +85,7 @@ function sendjsondata() {
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
     console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
-    /*saved = jsonhttp.response();*/
+    saved = jsonhttp.responseText;
 
     if (saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
