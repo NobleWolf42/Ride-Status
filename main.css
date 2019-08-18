@@ -16,6 +16,7 @@ body * {
   overflow: hidden;
   width: calc(70% - 2em);
   position: absolute;
+  top: 10px;
   left: 15%;
   right: 15%;
 }
