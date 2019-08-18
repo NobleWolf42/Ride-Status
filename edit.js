@@ -1,9 +1,9 @@
 myObj = {"not":"working", "count":42};
 
-function update() {
+/*function update() {
     var url = "/RideStatus/data.json";
     var xmlhttp = new XMLHttpRequest();
-    console.log("here");
+    console.log("here");*/
 
     /*xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -13,8 +13,8 @@ function update() {
     		};
     };*/
 
-    xmlhttp.open("GET", url, true);
-    xmlhttp.send();
+    /*xmlhttp.open("GET", url, true);
+    xmlhttp.send();*/
     
     /*function myProc(obj1) {
         var key;
@@ -107,4 +107,4 @@ function hidestatus() {
     document.getElementById("poststatus").hidden = true;
 };*/
 
-window.onload=update;
+/*window.onload=update;*/
