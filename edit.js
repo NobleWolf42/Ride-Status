@@ -105,4 +105,4 @@ function hidestatus() {
     document.getElementById("poststatus").hidden = true;
 };*/
 
-/*window.onload=update;*/
+window.onload=update;
