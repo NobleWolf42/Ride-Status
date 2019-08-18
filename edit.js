@@ -89,7 +89,7 @@ function sendjsondata() {
 
     console.log(saved.success);
     if (saved.success == true) {
-        console.log("!TRUE!";
+        console.log("!TRUE!");
         document.getElementById("poststatusdiv").hidden = false;
         document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#006e33";
