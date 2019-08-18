@@ -82,7 +82,8 @@ img {
   overflow: hidden;
   width: calc(80% - 2em);
   background-color: #FF00FF;
-  position: relative;
+  position: absolute;
+  z-index: 100;
   top: 20px;
 }
 
