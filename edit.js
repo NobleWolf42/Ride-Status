@@ -17,7 +17,6 @@ function update() {
     function myProc(obj1) {
         var key;
         for (key in obj1) {
-            console.log(key + "stat");
             document.getElementById(key + "stat").selectedIndex = obj1[key].status;
             document.getElementById(key + "note").value = obj1[key].notes;
         }
@@ -59,7 +58,7 @@ function sendjsondata() {
     dataObj.lightnin.notes = document.getElementById("lightninnote").value;
     dataObj.carousel.status = document.getElementById("carouselstat").selectedIndex;
     dataObj.carousel.notes = document.getElementById("carouselnote").value;
-    document.getElementById("umbrellastat").selectedIndex;
+    dataObj.umbrella.notes = document.getElementById("umbrellastat").selectedIndex;
     dataObj.umbrella.notes = document.getElementById("umbrellanote").value;
     dataObj.kiddieland.status = document.getElementById("kiddielandstat").selectedIndex;
     dataObj.kiddieland.notes = document.getElementById("kiddielandnote").value;
