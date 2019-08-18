@@ -14,13 +14,13 @@ app.post("/submitjson", function(request, response) {
     fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
             console.log(err);
-            response.send({ 
+            response.json({ 
                 success: false
             });
         }
         else {
             console.log("The file was saved!");
-            response.send({ 
+            response.json({ 
                 success: true
             });
         }
