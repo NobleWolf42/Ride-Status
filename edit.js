@@ -104,7 +104,7 @@ function sendjsondata() {
 };
 
 function hidestatus() {
-    document.getElementById("poststatus").style.display = "none";
+    document.getElementById("poststatusdiv").style.display = "none";
 };
 
 window.onload=update;
