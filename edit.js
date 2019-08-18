@@ -33,7 +33,8 @@ function sendjsondata() {
     
     jsonhttp.onreadystatechange = function() {
         if (jsonhttp.readyState == 4 && jsonhttp.status == 200) {
-            alert(jsonhttp.responseText);
+            saved = jsonhttp.responseXML;
+            console.log(saved);
     		};
     };
     
@@ -85,8 +86,6 @@ function sendjsondata() {
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
     console.log(JSON.stringify(dataObj));
     jsonhttp.send(JSON.stringify(dataObj));
-    saved = jsonhttp.responseText;
-    console.log(saved);
 
     if (saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
