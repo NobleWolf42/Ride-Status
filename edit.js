@@ -8,7 +8,7 @@ function update() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             console.log(myObj);
-    		myProc(myObj);
+    		/*myProc(myObj);*/
     		}
     }
 
