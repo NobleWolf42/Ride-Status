@@ -90,6 +90,8 @@ function sendjsondata() {
     jsonhttp.send(JSON.stringify(dataObj));
 
     function customalert(tf) {
+        console.log("!TF!");
+        console.log(tf);
         if (tf == true) {
             console.log("!TRUE!");
             document.getElementById("poststatusdiv").hidden = false;
