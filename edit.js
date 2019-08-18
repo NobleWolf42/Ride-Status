@@ -5,13 +5,13 @@ function update() {
     var xmlhttp = new XMLHttpRequest();
     console.log("here");
 
-    xmlhttp.onreadystatechange = function() {
+    /*xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             console.log(xmlhttp.responseText);
-    		/*myProc(myObj);*/
+    		/*myProc(myObj);*//*
     		};
-    };
+    };*/
 
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
@@ -25,7 +25,7 @@ function update() {
     };*/
 };
 
-function sendjsondata() {
+/*function sendjsondata() {
     var jsonurl = "http://www.noblewolf42.com:3000/submitjson";
     var jsonhttp = new XMLHttpRequest();
     var dataObj = myObj;
@@ -79,7 +79,7 @@ function sendjsondata() {
     /*dataObj.wtubing.status = document.getElementById("wtubingstat").selectedIndex;
     dataObj.wtubing.notes = document.getElementById("wtubingnote").value;
     dataObj.ski.status = document.getElementById("skistat").selectedIndex;
-    dataObj.ski.notes = document.getElementById("skinote").value;*/
+    dataObj.ski.notes = document.getElementById("skinote").value;*//*
 
     jsonhttp.open("POST", jsonurl, true);
     jsonhttp.setRequestHeader('Content-Type', 'application/json');
@@ -87,7 +87,7 @@ function sendjsondata() {
     jsonhttp.send(JSON.stringify(dataObj));
     saved = jsonhttp.response();
 
-    /*if (saved.success) {
+    if (saved.success) {
         document.getElementById("poststatusdiv").hidden = false;
         document.getElementById("poststatus").innerHTML = 'The information has been successfully saved!  TEST TEXT<p class="poststatus" style="position: absolute; top: 0%; left: 96%" href="#" onclick="hidestatus()"><u><b>X</b></u></p>';
         document.getElementById("poststatusdiv").style.color = "#006e33";
@@ -100,11 +100,11 @@ function sendjsondata() {
         document.getElementById("poststatusdiv").style.color = "#bb0706";
         document.getElementById("poststatusdiv").style.backgroundColor = "#cb344a";
         setTimeout(hidestatus, 10000);
-    }*/
+    }
 };
 
 function hidestatus() {
     document.getElementById("poststatus").hidden = true;
-};
+};*/
 
 window.onload=update;
