@@ -5,14 +5,16 @@
         <script src="edit.js"></script>
         <link rel="stylesheet" type="text/css" href="main.css">
     </head>
-    <body>      
-        <h2>Edit Current Ride Status</h2>
-        <form>
+    <body>
+        
+        <div class="table-users">  
+        <div class="header">Current Status of Attractions</div>
+
             <table>
                 <tr>
-                    <th width=200>Attraction</th>
-                    <th width=150>Text Status</th>
-                    <th width=200>Notes</th>
+                    <th>Attraction</th>
+                    <th>Status</th>
+                    <th>Notes</th>
                 </tr>
                 <tr>
                     <td>Blue Cyclone</td>
@@ -278,6 +280,7 @@
                     <td colspan="3"><input type="button" value="Submit" onclick="sendjsondata();"></td>
                 </tr>
             </table>
+            </div>
         </form>
     </body>
 </html>
