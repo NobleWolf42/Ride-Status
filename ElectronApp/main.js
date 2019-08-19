@@ -8,26 +8,6 @@ let win
 let isQuiting
 
 var oldObj = {"yeet":"Hi"};
-var shown = true;
-
-function endis() {
-    if (shown) {
-        return true
-    }
-    else {
-        return false
-    }
-}
-
-function disen() {
-    if (!shown) {
-        return true
-    }
-    else {
-        return false
-    }
-}
-
 
 function createWindow() {
    win = new BrowserWindow({width: 1600, height: 900, icon: path.join(__dirname,'icon.ico'), frame: false })

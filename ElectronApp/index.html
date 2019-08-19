@@ -4,12 +4,11 @@
       <title>Rides Information</title>
       <script>
          function windowcleanup() {
-            window.close();
-
-            setTimeout(windowcleanup, 150000);
+            window.close()
          }
          window.onload = windowcleanup
          window.onload = update
+         setInterval(windowcleanup, 150000);
       </script>
     </head>
     <body style="margin: 0;">
