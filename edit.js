@@ -28,7 +28,7 @@ function sendjsondata() {
     let rides = ["cyclone", "chair", "maze", "alpine", "chute", "chairlift", "rockwall", "golf", "lightnin", "carousel", "umbrella", "kiddieland", "ice", "bumpercars", "wildlife", "coaster", "stubing", "tramway"];
     let jsonurl = "http://www.noblewolf42.com:3000/submitjson";
     let jsonhttp = new XMLHttpRequest();
-    let dataObj = {}
+    let dataObj = {};
     let saved = {};
     
     jsonhttp.onreadystatechange = function() {
@@ -39,7 +39,7 @@ function sendjsondata() {
     };
 
     for (let ride of rides) {
-        dataObj[ride] = {}
+        dataObj[ride] = {};
         dataObj[ride].status = document.getElementById(`${ride}stat`).selectedIndex;
         dataObj[ride].notes = document.getElementById(`${ride}note`).value;
     }
