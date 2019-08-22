@@ -6,26 +6,23 @@ var app = express();
 const fs = require('fs');
 var jsondata = require('./data.json');
 
-console.log(jsondata);
-
 app.use(cors());
 
 app.use(myParser.json());
 
+app.get("/getjson", function (request, response) {
+    response.send(jsondata);
+})
+
 app.post("/submitjson", function(request, response) {
-    console.log(request.body);
     jsondata = JSON.stringify(request.body);
-    console.log("New Json");
-    console.log(jsondata);
     fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
-            console.log(err);
             response.json({ 
                 success: false
             });
         }
         else {
-            console.log("The file was saved!");
             response.json({ 
                 success: true
             });
