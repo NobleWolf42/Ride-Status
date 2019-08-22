@@ -4,6 +4,9 @@ var myParser = require("body-parser");
 var cors = require('cors');
 var app = express();
 const fs = require('fs');
+var jsondata = require('./data.json');
+
+console.log(jsondata);
 
 app.use(cors());
 
