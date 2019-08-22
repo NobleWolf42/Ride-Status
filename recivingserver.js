@@ -14,6 +14,9 @@ app.use(myParser.json());
 
 app.post("/submitjson", function(request, response) {
     console.log(request.body);
+    jsondata = JSON.stringify(request.body);
+    console.log("New Json");
+    console.log(jsondata);
     fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
             console.log(err);
