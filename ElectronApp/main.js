@@ -66,7 +66,7 @@ function createWindow() {
 }
 
 function newold() {
-    var url = "http://www.noblewolf42.com/RideStatus/data.json";
+    var url = "http://www.noblewolf42.com:3000/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = {};
     differences = {};

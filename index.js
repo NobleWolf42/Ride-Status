@@ -1,5 +1,5 @@
 function update() {
-    var url = "/RideStatus/data.json";
+    var url = "http://www.noblewolf42.com:3000/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = {"not":"working", "count":42};
     
