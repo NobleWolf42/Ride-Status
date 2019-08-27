@@ -37,7 +37,6 @@ function createWindow() {
         {
             label: 'Show Ride Status',
             click: function() {
-                console.log("Clicked on Show")
                 win.show()
             }
         },
@@ -45,7 +44,6 @@ function createWindow() {
         {
             label: 'Hide Ride Status',
             click: function() {
-                console.log("Clicked on Hide")
                 win.hide()
             }
         },
@@ -53,7 +51,6 @@ function createWindow() {
         {
             label: 'Exit',
             click: function () {
-                console.log("Clicked on Exit")
                 app.isQuiting = true
                 app.quit()
             }
@@ -104,7 +101,6 @@ function newold() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             if (oldObj.yeet == "Hi") {
-                console.log("On Startup")
                 oldObj = myObj
             }
             myProc()
@@ -214,11 +210,8 @@ function newold() {
 
     function myProc() {
         diff(oldObj, myObj);
-        console.log("Differences:");
-        console.log(differences);
         msg = ''
         for (key in differences) {
-            console.log(differences[key])
             key22 = differences[key]
             msg = msg + titles[key] + ' is now ' + opcl[key22.status] + '. Notes: ' + key22.notes + '\n'
         }
