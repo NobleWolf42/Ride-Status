@@ -240,7 +240,7 @@ function newold() {
     }
 }
 
-setInterval ( newold, 60000 );
+setInterval ( newold, 5000 );
 app.on('ready', createWindow)
 app.on('ready', newold)
 app.on('before-quit', function () {
