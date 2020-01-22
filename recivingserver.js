@@ -11,6 +11,7 @@ app.use(cors());
 app.use(myParser.json());
 
 app.get("/getjson", function (request, response) {
+    console.log("GET JSON!!!!");
     console.log(JSON.stringify(fs.readFileSync('data.json')));
     response.send(JSON.stringify(fs.readFileSync('data.json')));
 })
