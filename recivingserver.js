@@ -35,3 +35,4 @@ app.post("/submitjson", function(request, response) {
 //Start the server and make it listen for connections on port 3001
 
 app.listen(3001);
+console.log("Listening");
