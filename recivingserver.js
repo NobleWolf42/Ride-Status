@@ -11,7 +11,8 @@ app.use(cors());
 app.use(myParser.json());
 
 app.get("/getjson", function (request, response) {
-    response.send(jsondata);
+    console.log(JSON.stringify(fs.readFileSync('data.json')));
+    response.send(JSON.stringify(fs.readFileSync('data.json')));
 })
 
 app.post("/submitjson", function(request, response) {
@@ -30,6 +31,6 @@ app.post("/submitjson", function(request, response) {
     });
 });
  
-//Start the server and make it listen for connections on port 8080
+//Start the server and make it listen for connections on port 3001
 
 app.listen(3001);
