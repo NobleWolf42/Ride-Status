@@ -63,7 +63,7 @@ function createWindow() {
 }
 
 function newold() {
-    var url = "http://www.noblewolf42.com:3000/getjson";
+    var url = "http://www.noblewolf42.com:3001/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = {};
     differences = {};

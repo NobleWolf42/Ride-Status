@@ -4,7 +4,7 @@
   "description": "Alert Box",
   "main": "main.js",
   "dependencies": {
-    "electron": "^6.0.2",
+    "electron": "^6.1.7",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {},
