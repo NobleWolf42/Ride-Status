@@ -5,6 +5,7 @@ var cors = require('cors');
 var app = express();
 const fs = require('fs');
 var jsondata = require('./data.json');
+var PORT = process.env.PORT || 3001;
 
 app.use(cors());
 
@@ -12,8 +13,8 @@ app.use(myParser.json());
 
 app.get("/getjson", function (request, response) {
     console.log("GET JSON!!!!");
-    console.log(JSON.stringify(fs.readFileSync('data.json')));
-    response.send(JSON.stringify(fs.readFileSync('data.json')));
+    console.log(jsondata);
+    response.send(jsondata));
 })
 
 app.post("/submitjson", function(request, response) {
@@ -34,5 +35,6 @@ app.post("/submitjson", function(request, response) {
  
 //Start the server and make it listen for connections on port 3001
 
-app.listen(3001);
-console.log("Listening");
+app.listen(PORT, function () {
+    console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
+});
