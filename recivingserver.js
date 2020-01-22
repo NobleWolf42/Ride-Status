@@ -12,8 +12,7 @@ app.use(cors());
 app.use(myParser.json());
 
 app.get("/getjson", function (request, response) {
-    console.log("GET JSON!!!!");
-    console.log(jsondata);
+    console.log("Get JSON.");
     response.send(jsondata);
 })
 
@@ -21,11 +20,13 @@ app.post("/submitjson", function(request, response) {
     jsondata = JSON.stringify(request.body);
     fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
+            console.log("Save File Failed.");
             response.json({ 
                 success: false
             });
         }
         else {
+            console.log("File Saved Sucessfully!")
             response.json({ 
                 success: true
             });
