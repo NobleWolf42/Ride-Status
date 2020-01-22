@@ -14,7 +14,7 @@ app.use(myParser.json());
 app.get("/getjson", function (request, response) {
     console.log("GET JSON!!!!");
     console.log(jsondata);
-    response.send(jsondata));
+    response.send(jsondata);
 })
 
 app.post("/submitjson", function(request, response) {
