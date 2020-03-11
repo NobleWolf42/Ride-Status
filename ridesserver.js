@@ -1,6 +1,7 @@
 //Import the necessary libraries/declare the necessary objects
 var express = require("express");
 var myParser = require("body-parser");
+var https = require('https');
 var cors = require('cors');
 var app = express();
 const fs = require('fs');
@@ -35,7 +36,12 @@ app.post("/submitjson", function(request, response) {
 });
  
 //Start the server and make it listen for connections on port 3001
+var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/privkey.pem', 'utf8');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/cert.pem', 'utf8');
+var credentials = {key: privateKey, cert: certificate};
+var httpsServer = https.createServer(credentials, app);
 
-app.listen(PORT, function () {
-    console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
-});
+httpsServer.listen(3001);
+//app.listen(PORT, function () {
+//    console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
+//});
