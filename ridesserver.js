@@ -19,7 +19,7 @@ app.get("/getjson", function (request, response) {
 
 app.post("/submitjson", function(request, response) {
     jsondata = JSON.stringify(request.body);
-    fs.writeFile("/var/www/html/bencarpenterit.com/projects/RideStatus/data.json", JSON.stringify(request.body), function(err) {
+    fs.writeFile("/var/www/html/bencarpenterit.com/public/projects/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
             console.log("Save File Failed.");
             console.log(err);
