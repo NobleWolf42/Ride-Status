@@ -1,7 +1,7 @@
 myObj = {"not":"working", "count":42};
 
 function update() {
-    var url = "http://www.noblewolf42.com:3001/getjson";
+    var url = "https://www.bencarpenter.com:3001/getjson";
     var xmlhttp = new XMLHttpRequest();
 
     xmlhttp.onreadystatechange = function() {
@@ -26,7 +26,7 @@ function update() {
 
 function sendjsondata() {
     let rides = ["cyclone", "chair", "maze", "alpine", "chute", "chairlift", "rockwall", "golf", "lightnin", "carousel", "umbrella", "kiddieland", "ice", "bumpercars", "wildlife", "coaster", "stubing", "tramway"];
-    let jsonurl = "http://www.noblewolf42.com:3001/submitjson";
+    let jsonurl = "https://www.bencarpenter.com:3001/submitjson";
     let jsonhttp = new XMLHttpRequest();
     let dataObj = {};
     let saved = {};

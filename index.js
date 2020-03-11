@@ -1,5 +1,5 @@
 function update() {
-    var url = "http://www.noblewolf42.com:3001/getjson";
+    var url = "https://www.bencarpenterit.com:3001/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = {"not":"working", "count":42};
     

@@ -1,11 +1,11 @@
-const {app, BrowserWindow, Tray, Menu, dialog} = require('electron')
-const url = require('url')
-const path = require('path')
-const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest
+const { app, BrowserWindow, Tray, Menu, dialog } = require('electron');
+const url = require('url');
+const path = require('path');
+const XMLHttpRequest = require("xmlhttprequest").XMLHttpRequest;
 
-let trayIcon = null
-let win
-let isQuiting
+let trayIcon = null;
+let win;
+let isQuiting;
 
 var oldObj = {"yeet":"Hi"};
 
@@ -63,7 +63,7 @@ function createWindow() {
 }
 
 function newold() {
-    var url = "http://www.noblewolf42.com:3001/getjson";
+    var url = "https://www.bencarpenterit.com:3001/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = {};
     differences = {};

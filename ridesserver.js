@@ -22,6 +22,7 @@ app.post("/submitjson", function(request, response) {
     fs.writeFile("/var/www/html/RideStatus/data.json", JSON.stringify(request.body), function(err) {
         if(err) {
             console.log("Save File Failed.");
+            console.log(err);
             response.json({ 
                 success: false
             });
