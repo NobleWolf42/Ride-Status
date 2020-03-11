@@ -38,7 +38,7 @@ app.post("/submitjson", function(request, response) {
  
 //Start the server and make it listen for connections on port 3001
 var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/privkey.pem', 'utf8');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/cert.pem', 'utf8');
+var certificate = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/fullchain.pem', 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 var httpsServer = https.createServer(credentials, app);
 

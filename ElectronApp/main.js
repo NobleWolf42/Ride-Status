@@ -98,6 +98,7 @@ function newold() {
         opcl[4]="Closed for The Season";
       
     xmlhttp.onreadystatechange = function() {
+        console.log(xmlhttp.statusText);
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
             if (oldObj.yeet == "Hi") {
@@ -213,7 +214,7 @@ function newold() {
         msg = ''
         for (key in differences) {
             key22 = differences[key]
-            msg = msg + titles[key] + ' is now ' + opcl[key22.status] + '. Notes: ' + key22.notes + '\n'
+            msg = msg + titles[key] + ' is now ' + opcl[key22.status] + '. Notes: ' + ocpl[key22.notes] + '\n'
         }
         if (differences.nope != "noo") {
             dialog.showMessageBox(
