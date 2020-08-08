@@ -6,7 +6,7 @@ var cors = require('cors');
 var app = express();
 const fs = require('fs');
 var jsondata = require('./data.json');
-var PORT = process.env.PORT || 3001;
+const keys = require('keys.json')
 
 app.use(cors());
 
@@ -37,8 +37,8 @@ app.post("/submitjson", function(request, response) {
 });
  
 //Start the server and make it listen for connections on port 3001
-var privateKey  = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/privkey.pem', 'utf8');
-var certificate = fs.readFileSync('/etc/letsencrypt/live/bencarpenterit.com/fullchain.pem', 'utf8');
+var privateKey  = fs.readFileSync(keys.privateKey, 'utf8');
+var certificate = fs.readFileSync(keys.publicKey, 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 var httpsServer = https.createServer(credentials, app);
 
