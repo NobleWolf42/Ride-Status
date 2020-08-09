@@ -7,6 +7,7 @@ var app = express();
 const fs = require('fs');
 var jsondata = require('./data.json');
 const keys = require('./keys.json')
+const PORT = 3001;
 
 app.use(cors());
 
@@ -42,6 +43,6 @@ var certificate = fs.readFileSync(keys.publicKey, 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 var httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(3001, function () {
+httpsServer.listen(PORT, function () {
     console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
 });
