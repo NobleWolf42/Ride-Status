@@ -42,7 +42,6 @@ var certificate = fs.readFileSync(keys.publicKey, 'utf8');
 var credentials = {key: privateKey, cert: certificate};
 var httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(3001);
-//app.listen(PORT, function () {
-//    console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
-//});
+httpsServer.listen(3001, function () {
+    console.log('Server running, version 1.0.0, Express is listening... at ' + PORT + " for requests");
+});
