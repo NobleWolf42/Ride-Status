@@ -1,34 +1,36 @@
 function update() {
-    var url = "https://www.bencarpenterit.com:3001/getjson";
+    var url = "https://bencarpenterit.com:3001/getjson";
     var xmlhttp = new XMLHttpRequest();
-    myObj = {"not":"working", "count":42};
-    
+    myObj = { not: "working", count: 42 };
+
     var opcl = new Array();
-        opcl[0]="Open";
-        opcl[1]="Closed";
-        opcl[2]="Temporaly Closed for Weather";
-        opcl[3]="Temporaly Closed for Maintence";
-        opcl[4]="Closed for The Season";
-    
-    xmlhttp.onreadystatechange = function() {
+    opcl[0] = "Open";
+    opcl[1] = "Closed";
+    opcl[2] = "Temporaly Closed for Weather";
+    opcl[3] = "Temporaly Closed for Maintence";
+    opcl[4] = "Closed for The Season";
+
+    xmlhttp.onreadystatechange = function () {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
             myObj = JSON.parse(xmlhttp.responseText);
-    		myProc(myObj);
-    		}
-    }
-    
+            myProc(myObj);
+        }
+    };
+
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
-    
+
     function myProc(obj1) {
         var key;
         for (key in obj1) {
-            document.getElementById(key + "stat").innerHTML = opcl[obj1[key].status];
+            document.getElementById(key + "stat").innerHTML =
+                opcl[obj1[key].status];
             document.getElementById(key + "note").innerHTML = obj1[key].notes;
-            document.getElementById(key + "pic").src = obj1[key].status + '.png';
+            document.getElementById(key + "pic").src =
+                obj1[key].status + ".png";
         }
     }
-};
+}
 
-window.onload=update;
-setInterval ( update, 5000 );
+window.onload = update;
+setInterval(update, 5000);
