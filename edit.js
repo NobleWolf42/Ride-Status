@@ -35,7 +35,7 @@ function sendjsondata() {
         "chairlift",
         "rockwall",
         "golf",
-        "lightnin",
+        "lightning",
         "carousel",
         "umbrella",
         "kiddieland",

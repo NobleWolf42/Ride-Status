@@ -84,7 +84,7 @@ function newold() {
     titles["chairlift"] = "Scenic Chairlift";
     titles["rockwall"] = "Rock Wall";
     titles["golf"] = "Mini-Golf";
-    titles["lightnin"] = "Lightnin'";
+    titles["lightning"] = "Lightning'";
     titles["carousel"] = "Carousel";
     titles["umbrella"] = "Umbrella Rides";
     titles["kiddieland"] = "Kiddie Land & Train";
@@ -100,8 +100,8 @@ function newold() {
     var opcl = new Array();
     opcl[0] = "Open";
     opcl[1] = "Closed";
-    opcl[2] = "Temporaly Closed for Weather";
-    opcl[3] = "Temporaly Closed for Maintence";
+    opcl[2] = "Temporally Closed for Weather";
+    opcl[3] = "Temporally Closed for Maintenance";
     opcl[4] = "Closed for The Season";
 
     xmlhttp.onreadystatechange = function () {
