@@ -1,5 +1,5 @@
 function update() {
-    var url = "https://bencarpenterit.com:3001/getjson";
+    var url = "https://ridesapi.bencarpenterit.com/getjson";
     var xmlhttp = new XMLHttpRequest();
     myObj = { not: "working", count: 42 };
 
