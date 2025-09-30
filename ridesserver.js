@@ -1,11 +1,11 @@
 //Import the necessary libraries/declare the necessary objects
-var express = require("express");
-var myParser = require("body-parser");
-var http = require("http");
-var cors = require("cors");
-var app = express();
+let express = require("express");
+let myParser = require("body-parser");
+let http = require("http");
+let cors = require("cors");
+let app = express();
 const fs = require("fs");
-var jsondata = require("./data.json");
+let jsondata = require("./data.json");
 const keys = require("./keys.json");
 const PORT = 3001;
 
@@ -21,7 +21,7 @@ app.get("/getjson", function (request, response) {
 app.post("/submitjson", function (request, response) {
     jsondata = JSON.stringify(request.body);
     fs.writeFile(
-        "/var/www/html/bencarpenterit.com/public_html/projects/RideStatus/data.json",
+        "/let/www/html/bencarpenterit.com/public_html/projects/RideStatus/data.json",
         JSON.stringify(request.body),
         function (err) {
             if (err) {
@@ -41,10 +41,10 @@ app.post("/submitjson", function (request, response) {
 });
 
 //Start the server and make it listen for connections on port 3001
-var privateKey = fs.readFileSync(keys.privateKey, "utf8");
-var certificate = fs.readFileSync(keys.publicKey, "utf8");
-var credentials = { key: privateKey, cert: certificate };
-var httpsServer = http.createServer(app);
+let privateKey = fs.readFileSync(keys.privateKey, "utf8");
+let certificate = fs.readFileSync(keys.publicKey, "utf8");
+let credentials = { key: privateKey, cert: certificate };
+let httpsServer = http.createServer(app);
 
 httpsServer.listen(PORT, function () {
     console.log(
